@@ -1,0 +1,1 @@
+document.querySelectorAll(".heart-icon").forEach(e=>{e.addEventListener("click",function(){this.src.includes("icon-heart.svg")?this.src="../assets/images/index/icon-heart-fill.svg":this.src="../assets/images/index/icon-heart.svg"})});
