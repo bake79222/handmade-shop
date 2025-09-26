@@ -1,0 +1,183 @@
+.title-bottom-center {
+  position: relative; /* 讓偽元素以這個 span 為基準 */
+  display: inline-block; /* 避免 span 寬度撐不開 */
+  padding-bottom: 20px; /* 為底線和其間距預留空間 */
+}
+
+.title-bottom-center::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* 讓底線的起點在父元素的中間 */
+  transform: translateX(-50%); /* 讓底線向左移動自身寬度的一半 */
+  bottom: 0px; /* 與文字間距 */
+  width: 360px; /* 底線長度，比文字多 20% */
+  height: 2px; /* 底線粗細 */
+  background-color: $gray-900; /* 底線顏色 */
+}
+
+.title-bottom-left {
+  position: relative; /* 讓偽元素以這個 span 為基準 */
+  display: inline-block; /* 避免 span 寬度撐不開 */
+  padding-bottom: 20px; /* 為底線和其間距預留空間 */
+}
+
+.title-bottom-left::after {
+  content: "";
+  position: absolute;
+  left: 0; /* 讓底線的起點在父元素的中間 */
+  bottom: 0px; /* 與文字間距 */
+  width: 360px; /* 底線長度，比文字多 20% */
+  height: 2px; /* 底線粗細 */
+  background-color: $gray-900; /* 底線顏色 */
+}
+
+
+
+.product-item-dot-position-header-left{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 166px;
+    height: 134px;
+}
+
+.product-item-dot-position-header-right{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width: 166px;
+    height: 134px;
+}
+
+.img-product-main{
+  width: 100%;
+  height: 468px;
+  object-fit: cover;
+}
+.img-product-part{
+  width: 100%;
+  object-fit: cover;
+  height: 128px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.rounded-6px{
+  border-radius: 6px;
+}
+
+.color-box-size{
+  width: 86px;
+  height: 68px;
+  object-fit: cover;
+}
+.color-box-active {
+  border: 2px solid $gray-900; /* 你可以自己定義邊框的顏色、寬度和樣式 */
+}
+
+.quantity-box-size{
+  width: 86px;
+  height: 68px;
+  object-fit: cover;
+}
+
+
+.quantity-box-active {
+  border: 2px solid $gray-900; /* 你可以自己定義邊框的顏色、寬度和樣式 */
+}
+
+.quantity-num{
+  padding: 7px 95px;
+  font-size: 20px;
+  color: $gray-900;
+  border-bottom: 1px solid $gray-900;
+}
+
+.p-6px{
+  padding: 6px;
+}
+
+
+.item-introduction{
+  color: $gray-500;
+  font-size: 24px;
+}
+.item-introduction.active {
+  color: $gray-900; /* 或你想要的任何顏色 */
+  font-weight: bold; /* 讓文字變粗 */
+}
+
+.item-introduction + .item-introduction {
+  border-left: 1px solid $gray-500; /* 這裡就是分隔線 */
+  padding-left: 40px; /* 線與左邊文字的距離 */
+  margin-left: 40px; /* 線與右邊文字的距離 */
+}
+.p-48px{
+  padding: 48px;
+}
+.lh-1-2{
+  line-height: 1.2;
+}
+.dot-2-style{
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  bottom: -105px;
+  left: -280px;
+}
+
+
+
+@media (max-width: 991.98px) {
+  .dot-2-style{
+    display: none;
+  }
+  .img-product-main{
+    width: 100%;
+    height: 484px;
+    object-fit: cover;
+  }
+  .title-bottom-left {
+    padding-bottom: 0px; /* 為底線和其間距預留空間 */
+  }
+  .title-bottom-left::after{
+    width: 200px; /* 底線長度，比文字多 20% */
+  }   
+  .title-bottom-center::after {
+
+      width: 200px; /* 底線長度，比文字多 20% */
+
+  }
+  .product-item-dot-position-header-left{
+    display: none;  
+  }
+  .product-item-dot-position-header-right{
+    top: auto;
+    bottom:0px;
+    right: -24px;
+    width: 86px;
+    height: 86px;
+  }
+  .item-introduction{
+    font-size: 16px;
+    flex-grow: 1; /* 讓每個 a 元素自動填滿可用空間 */
+    text-align: center; /* 讓文字在各自的空間內居中 */
+  }
+  .item-introduction.active {
+    font-weight: normal; 
+  }
+
+  .item-introduction + .item-introduction {
+    /* 這裡的 padding 和 margin 需要根據你實際的設計調整，
+        讓線能更靠近中間 */
+    padding-left: 16px;
+    margin-left: 16px;
+  }
+  .p-48px{
+    padding: 24px;
+  }
+  .dot-2-style{
+    display: none;
+  }
+}

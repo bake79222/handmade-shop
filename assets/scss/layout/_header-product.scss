@@ -1,0 +1,22 @@
+.accordion-button.header-product-btn-style {
+  padding: 12px 8px !important;
+}
+
+.accordion-button-white.header-product-btn-style {
+  padding: 12px 8px !important;
+}
+/* 預設狀態 */
+.accordion-button-white {
+  background-color: $gray-900;       /* 收起時背景 */
+  border: 0;       /* 收起時邊框 */
+  color: white;                  /* 文字顏色 */
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  font-size: 20px !important;
+}
+.card-img-height-312{
+  height: 312px;
+  width: 100%;          /* 填滿容器寬度 */
+  object-fit: cover;    /* 維持比例，超出裁切 */
+  object-position: center; /* 裁切的時候置中 */
+}

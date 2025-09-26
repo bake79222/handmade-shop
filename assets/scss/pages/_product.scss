@@ -1,0 +1,111 @@
+
+
+
+
+/* 預設(收起狀態) */
+.accordion-button::after {
+  background-image: url("../assets/images/header/icon-arrow.svg") !important;
+
+  background-size: 1.25rem 1.25rem;
+  transform: none !important; /* 移除旋轉 */
+}
+
+/* 展開狀態 */
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../assets/images/header/icon-arrow.svg") !important;
+  transform: none !important; /* 移除旋轉 */
+}
+
+
+/* 預設狀態 */
+.accordion-button {
+  background-color: #fff;       /* 收起時背景 */
+  border: 0;       /* 收起時邊框 */
+  color: $gray-900;                  /* 文字顏色 */
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* 展開狀態 */
+.accordion-button:not(.collapsed) {
+  background-color: $gray-200;    /* 展開後背景色 */
+  color: $gray-900;                  /* 展開時文字顏色 */
+}
+
+/* 整個 accordion item 邊框 (可選) */
+.accordion-item {
+  border: 0;
+  border-radius: 0;
+}
+
+.accordion-button:focus {
+  border-color: transparent !important;  /* 取消藍色邊框 */
+  box-shadow: none !important;           /* 移除藍色陰影 */
+  outline: none !important;              /* 移除外框 */
+}
+.page-style{
+  color: $gray-500;
+  padding: 8px 16px;
+  font-style: 20px;
+  border-radius: 8px  !important; /* 強制覆蓋 border: 0 */;
+  border: 1px solid white;
+}
+
+.page-style:hover{
+  background-color: $gray-900; /* 懸停時的背景色 */
+  color: #fff;             /* 懸停時的文字顏色 */
+}
+
+.page-style:active {
+  background-color: #444; /* 啟用時的背景色 */
+  border-color: #444;      /* 啟用時的邊框色 */
+  color: #fff;             /* 啟用時的文字顏色 */
+}
+
+.arrow-style{
+  border: 0;
+}
+/* 設定箭頭按鈕的懸停 (hover) 狀態 */
+.arrow-style:hover {
+  background-color: transparent !important; /* 讓背景透明 */
+  border-color: transparent !important;      /* 讓邊框透明 */
+  color: inherit !important;                 /* 繼承父元素文字顏色 */
+}
+
+/* 設定箭頭按鈕的啟用 (active) 狀態 */
+.arrow-style:active {
+  background-color: transparent !important; /* 讓背景透明 */
+  border-color: transparent !important;      /* 讓邊框透明 */
+  color: inherit !important;                 /* 繼承父元素文字顏色 */
+}
+
+/* 確保當按鈕被按下時，不會有 Bootstrap 的陰影效果 */
+.arrow-style:focus {
+  box-shadow: none !important;
+}
+
+.line-position-header{
+  position: absolute;
+  bottom: 0;
+  right:-20px;
+  width: 264px;
+  height: 88px;
+}
+
+
+.dot-position-header{
+  position: absolute;
+  top:0px;
+  left: 88px;
+  width: 136px;
+  height: 160px;
+}
+
+@media (max-width: 1800px) {
+    .dot-position-header{
+      display: none;
+    }
+    .line-position-header{
+      display: none;
+    }
+  }
